@@ -22,9 +22,9 @@ def main():
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
     book_location = sys.argv[1]
-    num_words = get_num_words(get_book_text(book_location))
-    letter_count = get_letter_count(get_book_text(book_location))
-    letter_count_sorted = get_sorted_dict(letter_count)
+    book_text = get_book_text(book_location)
+    num_words = get_num_words(book_text)
+    letter_count_sorted = get_sorted_dict(get_letter_count(book_text))
     print_report(book_location, num_words, letter_count_sorted)
 
 main()
